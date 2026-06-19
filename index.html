@@ -1,12 +1,445 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Мой новый сайт</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Почему главный враг бизнеса — его владелец? · Вебинар школы СВОБОДА</title>
+<meta name="description" content="Бесплатный онлайн-вебинар для действующих предпринимателей. Поймите, какой навык собственника сейчас ограничивает рост вашего бизнеса.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper:#EFF0EA;
+    --paper-2:#E7E8DF;
+    --ink:#17201B;
+    --forest:#1C3D2E;
+    --forest-deep:#112A1F;
+    --line:#D7D6C7;
+    --muted:#5B655C;
+    --muted-on-dark:#A9BCAE;
+    --brass:#A98A4B;
+    --field:#FBFBF7;
+    --max:1100px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Manrope",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+
+  .wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 24px;}
+
+  /* ---------- Display type ---------- */
+  .display{font-family:"Spectral",Georgia,serif;font-weight:600;line-height:1.08;letter-spacing:-0.01em;}
+  .eyebrow{
+    font-size:13px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;
+    color:var(--brass);display:inline-flex;align-items:center;gap:12px;margin:0 0 22px;
+  }
+  .eyebrow::before{content:"";width:34px;height:1px;background:var(--brass);display:inline-block;}
+  .eyebrow.on-dark{color:#C9A86A;}
+  .eyebrow.on-dark::before{background:#C9A86A;}
+
+  /* ---------- Top bar ---------- */
+  .topbar{
+    position:sticky;top:0;z-index:50;
+    background:rgba(239,240,234,0.86);backdrop-filter:saturate(140%) blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .brand{font-family:"Spectral",serif;font-weight:700;font-size:19px;letter-spacing:0.02em;text-decoration:none;}
+  .brand small{font-weight:500;color:var(--muted);font-size:13px;letter-spacing:0.06em;margin-left:8px;}
+  .topbar .btn{padding:10px 18px;font-size:14px;}
+  @media(max-width:560px){ .brand small{display:none;} .topbar .btn{display:none;} }
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    background:var(--forest);color:#F3F2EA;text-decoration:none;
+    font-weight:600;font-size:17px;letter-spacing:0.01em;
+    padding:17px 30px;border-radius:2px;border:1px solid var(--forest);
+    cursor:pointer;transition:background .2s ease,transform .12s ease;
+  }
+  .btn:hover{background:var(--forest-deep);}
+  .btn:active{transform:translateY(1px);}
+  .btn.light{background:#F3F2EA;color:var(--forest-deep);border-color:#F3F2EA;}
+  .btn.light:hover{background:#fff;}
+  .btn:focus-visible{outline:3px solid var(--brass);outline-offset:3px;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:
+      radial-gradient(120% 120% at 80% 0%, #234a38 0%, var(--forest) 45%, var(--forest-deep) 100%);
+    color:#EEF1EC;
+    padding:84px 0 92px;
+    position:relative;overflow:hidden;
+  }
+  .hero::after{
+    content:"СВОБОДА";
+    position:absolute;right:-4%;bottom:-12%;
+    font-family:"Spectral",serif;font-weight:700;font-size:24vw;
+    color:rgba(255,255,255,0.035);letter-spacing:-0.02em;pointer-events:none;white-space:nowrap;
+  }
+  .hero .wrap{position:relative;z-index:2;}
+  .hero h1{
+    font-size:clamp(34px,6.2vw,68px);margin:0 0 22px;max-width:18ch;color:#F3F4EE;
+  }
+  .hero .sub{font-size:clamp(17px,2.2vw,21px);color:#CFE0D4;max-width:46ch;margin:0 0 38px;}
+
+  .datablock{
+    display:flex;flex-wrap:wrap;gap:0;border:1px solid rgba(255,255,255,0.16);
+    border-radius:3px;margin:0 0 34px;max-width:520px;overflow:hidden;
+  }
+  .datablock div{padding:18px 26px;flex:1 1 0;min-width:150px;}
+  .datablock div + div{border-left:1px solid rgba(255,255,255,0.16);}
+  .datablock .k{font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted-on-dark);margin-bottom:6px;}
+  .datablock .v{font-family:"Spectral",serif;font-size:24px;font-weight:600;color:#F3F4EE;}
+  @media(max-width:560px){ .datablock div + div{border-left:none;border-top:1px solid rgba(255,255,255,0.16);} }
+
+  .hero .undercta{margin:22px 0 0;font-size:15px;color:#B9CcBe;max-width:44ch;line-height:1.55;}
+  .hero .undercta b{color:#E9EFe9;font-weight:600;}
+
+  /* ---------- Sections ---------- */
+  .section{padding:78px 0;}
+  .section + .section{border-top:1px solid var(--line);}
+  .section h2{font-size:clamp(26px,3.6vw,40px);margin:0 0 14px;max-width:24ch;}
+  .lead{font-size:18px;color:var(--muted);max-width:54ch;margin:0 0 36px;}
+
+  /* check lists */
+  .checks{list-style:none;margin:0;padding:0;display:grid;gap:18px;}
+  .checks.two{grid-template-columns:1fr 1fr;gap:18px 40px;}
+  @media(max-width:680px){ .checks.two{grid-template-columns:1fr;} }
+  .checks li{display:flex;gap:16px;align-items:flex-start;font-size:18px;line-height:1.5;}
+  .checks li::before{
+    content:"";flex:0 0 auto;width:26px;height:26px;margin-top:1px;border-radius:50%;
+    background:var(--forest);
+    -webkit-mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='white' d='M9.55 17.6 4.4 12.45l1.4-1.4 3.75 3.75 8.25-8.25 1.4 1.4z'/></svg>") center/16px no-repeat;
+    mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='white' d='M9.55 17.6 4.4 12.45l1.4-1.4 3.75 3.75 8.25-8.25 1.4 1.4z'/></svg>") center/16px no-repeat;
+  }
+
+  /* "для кого" plain list */
+  .plainlist{list-style:none;margin:0 0 28px;padding:0;display:grid;gap:14px;max-width:46ch;}
+  .plainlist li{position:relative;padding-left:26px;font-size:18px;color:var(--ink);}
+  .plainlist li::before{content:"";position:absolute;left:0;top:13px;width:9px;height:9px;background:var(--brass);border-radius:50%;}
+  .closing{font-family:"Spectral",serif;font-size:22px;font-weight:600;color:var(--forest);}
+
+  /* soft note */
+  .softnote{
+    margin-top:30px;padding:20px 24px;background:var(--paper-2);border-left:3px solid var(--brass);
+    border-radius:0 3px 3px 0;color:var(--muted);font-size:16px;max-width:58ch;
+  }
+
+  /* host */
+  .host{display:grid;grid-template-columns:280px 1fr;gap:48px;align-items:center;}
+  .host .photo{border-radius:4px;overflow:hidden;background:var(--paper-2);aspect-ratio:4/5;}
+  .host .photo img{width:100%;height:100%;object-fit:cover;}
+  .host .name{font-family:"Spectral",serif;font-size:30px;font-weight:600;margin:0 0 18px;}
+  .host .bio{list-style:none;margin:0;padding:0;display:grid;gap:12px;}
+  .host .bio li{padding-left:24px;position:relative;font-size:18px;color:var(--ink);}
+  .host .bio li::before{content:"";position:absolute;left:0;top:12px;width:14px;height:1px;background:var(--brass);}
+  @media(max-width:680px){ .host{grid-template-columns:1fr;gap:28px;} .host .photo{max-width:260px;} }
+
+  /* diagnostics block */
+  .diag{background:var(--paper-2);}
+  .diag .strong{
+    font-family:"Spectral",serif;font-size:clamp(22px,3vw,28px);font-weight:600;color:var(--forest);
+    line-height:1.3;margin:36px 0 0;max-width:30ch;padding-top:28px;border-top:1px solid var(--line);
+  }
+
+  /* ---------- Form ---------- */
+  .form-section{
+    background:radial-gradient(120% 120% at 20% 0%, #234a38 0%, var(--forest) 50%, var(--forest-deep) 100%);
+    color:#EEF1EC;padding:80px 0;
+  }
+  .form-section h2{color:#F3F4EE;}
+  .form-section .lead{color:#C6D6CB;}
+  .form-card{
+    background:var(--paper);color:var(--ink);border-radius:4px;padding:38px;max-width:680px;
+  }
+  @media(max-width:560px){ .form-card{padding:26px 20px;} }
+  .field{margin-bottom:20px;}
+  .field label{display:block;font-weight:600;font-size:15px;margin-bottom:8px;}
+  .field input[type=text],.field input[type=tel],.field input[type=email]{
+    width:100%;padding:14px 16px;font-size:16px;font-family:inherit;color:var(--ink);
+    background:var(--field);border:1px solid var(--line);border-radius:3px;transition:border-color .15s;
+  }
+  .field input:focus{outline:none;border-color:var(--forest);box-shadow:0 0 0 3px rgba(28,61,46,0.12);}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  @media(max-width:560px){ .grid2{grid-template-columns:1fr;gap:0;} }
+
+  fieldset{border:none;margin:0 0 22px;padding:0;}
+  fieldset legend{font-weight:600;font-size:15px;margin-bottom:12px;padding:0;}
+  .opt{display:flex;align-items:flex-start;gap:12px;padding:11px 14px;border:1px solid var(--line);
+    border-radius:3px;margin-bottom:8px;cursor:pointer;background:var(--field);transition:border-color .15s,background .15s;font-size:16px;}
+  .opt:hover{border-color:#BFC4B3;}
+  .opt input{accent-color:var(--forest);margin-top:3px;flex:0 0 auto;width:18px;height:18px;}
+  .opt:has(input:checked){border-color:var(--forest);background:#fff;}
+
+  .form-card .btn{width:100%;margin-top:10px;}
+  .form-note{font-size:14px;color:var(--muted);margin-top:16px;text-align:center;}
+
+  .success{display:none;text-align:center;padding:24px 0;}
+  .success.show{display:block;}
+  .success .check{width:58px;height:58px;border-radius:50%;background:var(--forest);margin:0 auto 18px;
+    -webkit-mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='white' d='M9.55 17.6 4.4 12.45l1.4-1.4 3.75 3.75 8.25-8.25 1.4 1.4z'/></svg>") center/30px no-repeat;
+    mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='white' d='M9.55 17.6 4.4 12.45l1.4-1.4 3.75 3.75 8.25-8.25 1.4 1.4z'/></svg>") center/30px no-repeat;}
+  .success h3{font-family:"Spectral",serif;font-size:24px;margin:0 0 10px;color:var(--forest);}
+  .success p{color:var(--muted);margin:0;}
+
+  /* footer */
+  footer{background:var(--ink);color:#A9B2AB;padding:34px 0;font-size:14px;}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+  footer .brand-f{font-family:"Spectral",serif;color:#E7EAE5;font-size:16px;}
+
+  /* entrance */
+  @media(prefers-reduced-motion:no-preference){
+    .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease;}
+    .reveal.in{opacity:1;transform:none;}
+  }
+</style>
 </head>
 <body>
-  <h1>Новый сайт работает 🎉</h1>
-  <p>Это тестовая страница. Скоро здесь будет настоящий сайт.</p>
+
+<!-- ================= TOP BAR ================= -->
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top">СВОБОДА<small>школа предпринимательства</small></a>
+    <a class="btn" href="#reg">Зарегистрироваться</a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <span class="eyebrow on-dark">Бесплатный онлайн-вебинар</span>
+    <h1 class="display">Почему главный враг бизнеса — его владелец?</h1>
+    <p class="sub">Онлайн-вебинар для действующих предпринимателей.</p>
+
+    <div class="datablock">
+      <div>
+        <div class="k">Дата</div>
+        <div class="v">[ВСТАВИТЬ ДАТУ]</div>
+      </div>
+      <div>
+        <div class="k">Время</div>
+        <div class="v">[ВСТАВИТЬ ВРЕМЯ] МСК</div>
+      </div>
+    </div>
+
+    <a class="btn light" href="#reg">Зарегистрироваться на вебинар</a>
+    <p class="undercta">В конце вебинара участники смогут пройти <b>ИИ-диагностику предпринимателя</b> и получить персональную карту ограничений роста.</p>
+  </div>
+</section>
+
+<!-- ================= НА ВЕБИНАРЕ ВЫ УЗНАЕТЕ ================= -->
+<section class="section reveal">
+  <div class="wrap">
+    <span class="eyebrow">Программа</span>
+    <h2 class="display">На вебинаре вы узнаете</h2>
+    <ul class="checks two">
+      <li>Почему бизнес растёт только до уровня предпринимателя</li>
+      <li>Как определить свой главный потолок роста</li>
+      <li>Почему знания не дают результат</li>
+      <li>Какой навык ограничивает рост вашей компании</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= ДЛЯ КОГО ================= -->
+<section class="section reveal">
+  <div class="wrap">
+    <span class="eyebrow">Аудитория</span>
+    <h2 class="display">Для кого этот вебинар</h2>
+    <p class="lead">Если вы:</p>
+    <ul class="plainlist">
+      <li>работаете больше всех в компании;</li>
+      <li>не можете делегировать;</li>
+      <li>не понимаете, почему бизнес перестал расти;</li>
+      <li>постоянно тушите пожары —</li>
+    </ul>
+    <p class="closing">то этот вебинар для вас.</p>
+  </div>
+</section>
+
+<!-- ================= ТОЛЬКО ДЛЯ ДЕЙСТВУЮЩИХ ================= -->
+<section class="section reveal">
+  <div class="wrap">
+    <span class="eyebrow">Уровень участников</span>
+    <h2 class="display">Только для действующих предпринимателей</h2>
+    <p class="lead">На вебинаре мы говорим о развитии предпринимателя через работу над действующим бизнесом. Поэтому участие будет полезно, если:</p>
+    <ul class="checks two">
+      <li>у вас уже есть бизнес</li>
+      <li>есть клиенты</li>
+      <li>есть продажи</li>
+      <li>вы отвечаете за результат компании</li>
+    </ul>
+    <p class="softnote">Если вы только планируете открыть бизнес, часть материала может быть преждевременной для вашей текущей ситуации.</p>
+  </div>
+</section>
+
+<!-- ================= КТО ВЕДЕТ ================= -->
+<section class="section reveal">
+  <div class="wrap">
+    <span class="eyebrow">Ведущий</span>
+    <h2 class="display">Кто ведёт</h2>
+    <div class="host">
+      <div class="photo">
+        <!-- Загрузите фото в этот же репозиторий с именем founder.jpg (Add file → Upload files). -->
+        <img src="founder.jpg" alt="Инсар Валиахметов, основатель школы СВОБОДА" loading="lazy">
+      </div>
+      <div>
+        <p class="name">Инсар Валиахметов</p>
+        <ul class="bio">
+          <li>13+ лет предпринимательства</li>
+          <li>Выпускник СКОЛКОВО</li>
+          <li>Основатель школы предпринимательства СВОБОДА</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ИИ-ДИАГНОСТИКА ================= -->
+<section class="section diag reveal">
+  <div class="wrap">
+    <span class="eyebrow">После вебинара</span>
+    <h2 class="display">Что вы получите после ИИ-диагностики</h2>
+    <p class="lead">В конце вебинара участники смогут пройти ИИ-диагностику предпринимателя. Это не просто тест: диагностика поможет увидеть, что именно сейчас ограничивает рост вашей компании и какой навык собственника нужно развивать следующим. По итогам вы получите персональную карту ограничений роста.</p>
+    <p style="margin:0 0 22px;font-weight:600;">Она покажет:</p>
+    <ul class="checks two">
+      <li>что сейчас тормозит развитие вашего бизнеса</li>
+      <li>где находится главный потолок роста: в продажах, команде, управлении, делегировании, стратегии или роли собственника</li>
+      <li>какой навык предпринимателя нужно развивать следующим</li>
+      <li>почему текущие действия могут не давать результата</li>
+      <li>на чём стоит сфокусироваться в ближайшие 90 дней</li>
+    </ul>
+    <p class="strong">Диагностика поможет не гадать, что делать дальше, а увидеть главный ограничитель роста бизнеса.</p>
+  </div>
+</section>
+
+<!-- ================= ФОРМА ================= -->
+<section class="form-section" id="reg">
+  <div class="wrap">
+    <span class="eyebrow on-dark">Регистрация</span>
+    <h2 class="display">Зарегистрироваться на вебинар</h2>
+    <p class="lead">Оставьте заявку — детали подключения придут в выбранный канал связи.</p>
+
+    <div class="form-card">
+      <!--
+        ВАЖНО: чтобы заявки куда-то приходили, замените адрес в action ниже
+        на свой код Formspree (или подключите Telegram-бот). Подробности — в сообщении.
+      -->
+      <form id="regform" action="https://formspree.io/f/REPLACE_WITH_YOUR_ID" method="POST">
+        <div class="grid2">
+          <div class="field">
+            <label for="name">Имя</label>
+            <input type="text" id="name" name="Имя" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" name="Телефон" required autocomplete="tel">
+          </div>
+        </div>
+        <div class="grid2">
+          <div class="field">
+            <label for="tg">Telegram</label>
+            <input type="text" id="tg" name="Telegram" placeholder="@username">
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="Email" required autocomplete="email">
+          </div>
+        </div>
+
+        <fieldset>
+          <legend>Ваш статус</legend>
+          <label class="opt"><input type="radio" name="Статус" value="Собственник бизнеса" required> Собственник бизнеса</label>
+          <label class="opt"><input type="radio" name="Статус" value="Партнёр в бизнесе"> Партнёр в бизнесе</label>
+          <label class="opt"><input type="radio" name="Статус" value="Руководитель компании"> Руководитель компании</label>
+          <label class="opt"><input type="radio" name="Статус" value="Самозанятый"> Самозанятый</label>
+          <label class="opt"><input type="radio" name="Статус" value="Планирую открыть бизнес"> Планирую открыть бизнес</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Что сейчас больше всего ограничивает рост</legend>
+          <label class="opt"><input type="radio" name="Ограничение роста" value="Нет стабильных заявок" required> Нет стабильных заявок</label>
+          <label class="opt"><input type="radio" name="Ограничение роста" value="Заявки есть, но мало продаж"> Заявки есть, но мало продаж</label>
+          <label class="opt"><input type="radio" name="Ограничение роста" value="Всё держится на мне"> Всё держится на мне</label>
+          <label class="opt"><input type="radio" name="Ограничение роста" value="Не получается делегировать"> Не получается делегировать</label>
+          <label class="opt"><input type="radio" name="Ограничение роста" value="Команда не даёт результата"> Команда не даёт результата</label>
+          <label class="opt"><input type="radio" name="Ограничение роста" value="Не хватает времени"> Не хватает времени</label>
+          <label class="opt"><input type="radio" name="Ограничение роста" value="Не понимаю, что именно мешает"> Не понимаю, что именно мешает</label>
+        </fieldset>
+
+        <button type="submit" class="btn">Зарегистрироваться</button>
+        <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку данных для участия в вебинаре.</p>
+      </form>
+
+      <div class="success" id="success">
+        <div class="check"></div>
+        <h3>Заявка принята</h3>
+        <p>Детали подключения к вебинару придут в выбранный канал связи.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <span class="brand-f">СВОБОДА — школа предпринимательства</span>
+    <span>© 2026 · Предпринимательство — это профессия</span>
+  </div>
+</footer>
+
+<script>
+  // Плавная прокрутка к форме уже работает через CSS scroll-behavior.
+
+  // Появление секций при прокрутке
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // Обработка формы
+  const form = document.getElementById('regform');
+  const success = document.getElementById('success');
+
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    const data = new FormData(form);
+
+    // Если код Formspree ещё не вставлен — просто показываем подтверждение (для проверки вида).
+    if (form.action.includes('REPLACE_WITH_YOUR_ID')){
+      showSuccess();
+      console.warn('Форма не подключена: вставьте свой код Formspree в action, чтобы получать заявки.');
+      return;
+    }
+    try{
+      const res = await fetch(form.action, { method:'POST', body:data, headers:{'Accept':'application/json'} });
+      if(res.ok){ showSuccess(); }
+      else { alert('Не удалось отправить заявку. Попробуйте ещё раз.'); }
+    }catch(err){
+      alert('Проблема с соединением. Проверьте интернет и попробуйте ещё раз.');
+    }
+  });
+
+  function showSuccess(){
+    form.style.display='none';
+    success.classList.add('show');
+    success.scrollIntoView({behavior:'smooth', block:'center'});
+  }
+</script>
 </body>
 </html>
