@@ -3,206 +3,190 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Почему главный враг бизнеса — его владелец? · Вебинар школы СВОБОДА</title>
-<meta name="description" content="Бесплатный онлайн-вебинар для действующих предпринимателей. Поймите, какой навык собственника сейчас ограничивает рост вашего бизнеса.">
+<title>Почему главный враг бизнеса — его владелец? · Онлайн-встреча для предпринимателей</title>
+<meta name="description" content="Живая онлайн-встреча для действующих предпринимателей. Поймите, какой навык собственника сейчас ограничивает рост вашего бизнеса.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
   :root{
-    --paper:#EFF0EA;
-    --paper-2:#E7E8DF;
-    --ink:#17201B;
-    --forest:#1C3D2E;
-    --forest-deep:#112A1F;
-    --line:#D7D6C7;
-    --muted:#5B655C;
-    --muted-on-dark:#A9BCAE;
-    --brass:#A98A4B;
-    --field:#FBFBF7;
-    --max:1100px;
+    --navy:#16284B;
+    --navy-deep:#0F1E3C;
+    --azure:#2C97DD;
+    --azure-bright:#3AA8EE;
+    --sky:#6FC0EE;
+    --ink:#1B2740;
+    --paper:#FFFFFF;
+    --paper-2:#EEF4FA;
+    --paper-3:#E3EDF6;
+    --line:#D6E1EC;
+    --muted:#5B6B82;
+    --muted-on-dark:#A7B8D2;
+    --max:1120px;
   }
-
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:"Manrope",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-    font-size:17px;
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;
   }
   img{max-width:100%;display:block;}
-  a{color:inherit;}
-
   .wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 24px;}
+  .display{font-family:"Montserrat",sans-serif;font-weight:800;line-height:1.07;letter-spacing:-0.01em;}
+  .accent{color:var(--azure);}
 
-  /* ---------- Display type ---------- */
-  .display{font-family:"Spectral",Georgia,serif;font-weight:600;line-height:1.08;letter-spacing:-0.01em;}
   .eyebrow{
-    font-size:13px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;
-    color:var(--brass);display:inline-flex;align-items:center;gap:12px;margin:0 0 22px;
+    font-family:"Montserrat",sans-serif;font-size:13px;font-weight:700;letter-spacing:0.12em;
+    text-transform:uppercase;color:var(--azure);display:inline-flex;align-items:center;gap:12px;margin:0 0 20px;
   }
-  .eyebrow::before{content:"";width:34px;height:1px;background:var(--brass);display:inline-block;}
-  .eyebrow.on-dark{color:#C9A86A;}
-  .eyebrow.on-dark::before{background:#C9A86A;}
+  .eyebrow::before{content:"";width:30px;height:2px;background:var(--azure);display:inline-block;}
+  .eyebrow.on-dark{color:var(--sky);}
+  .eyebrow.on-dark::before{background:var(--sky);}
 
   /* ---------- Top bar ---------- */
-  .topbar{
-    position:sticky;top:0;z-index:50;
-    background:rgba(239,240,234,0.86);backdrop-filter:saturate(140%) blur(8px);
-    border-bottom:1px solid var(--line);
-  }
-  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;}
-  .brand{font-family:"Spectral",serif;font-weight:700;font-size:19px;letter-spacing:0.02em;text-decoration:none;}
-  .brand small{font-weight:500;color:var(--muted);font-size:13px;letter-spacing:0.06em;margin-left:8px;}
+  .topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.9);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--line);}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;}
+  .logo-area{display:flex;align-items:center;gap:12px;text-decoration:none;}
+  .logo-area img{height:40px;width:auto;}
+  .wordmark{display:flex;flex-direction:column;line-height:1;}
+  .wordmark b{font-family:"Montserrat",sans-serif;font-weight:800;font-size:20px;color:var(--navy);}
+  .wordmark b span{color:var(--azure);}
+  .wordmark small{font-size:9px;letter-spacing:0.22em;color:var(--muted);text-transform:uppercase;margin-top:3px;}
   .topbar .btn{padding:10px 18px;font-size:14px;}
-  @media(max-width:560px){ .brand small{display:none;} .topbar .btn{display:none;} }
+  @media(max-width:560px){ .wordmark small{display:none;} .topbar .btn{padding:9px 14px;font-size:13px;} }
 
   /* ---------- Buttons ---------- */
   .btn{
     display:inline-flex;align-items:center;justify-content:center;gap:10px;
-    background:var(--forest);color:#F3F2EA;text-decoration:none;
-    font-weight:600;font-size:17px;letter-spacing:0.01em;
-    padding:17px 30px;border-radius:2px;border:1px solid var(--forest);
-    cursor:pointer;transition:background .2s ease,transform .12s ease;
+    background:var(--azure);color:#fff;text-decoration:none;
+    font-family:"Montserrat",sans-serif;font-weight:700;font-size:17px;
+    padding:17px 32px;border-radius:8px;border:none;cursor:pointer;
+    transition:background .2s ease,transform .12s ease;box-shadow:0 6px 18px rgba(44,151,221,0.28);
   }
-  .btn:hover{background:var(--forest-deep);}
+  .btn:hover{background:var(--azure-bright);}
   .btn:active{transform:translateY(1px);}
-  .btn.light{background:#F3F2EA;color:var(--forest-deep);border-color:#F3F2EA;}
-  .btn.light:hover{background:#fff;}
-  .btn:focus-visible{outline:3px solid var(--brass);outline-offset:3px;}
+  .btn.ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.5);box-shadow:none;}
+  .btn.ghost:hover{background:rgba(255,255,255,0.08);}
+  .btn:focus-visible{outline:3px solid var(--sky);outline-offset:3px;}
 
   /* ---------- Hero ---------- */
-  .hero{
-    background:
-      radial-gradient(120% 120% at 80% 0%, #234a38 0%, var(--forest) 45%, var(--forest-deep) 100%);
-    color:#EEF1EC;
-    padding:84px 0 92px;
-    position:relative;overflow:hidden;
-  }
-  .hero::after{
-    content:"СВОБОДА";
-    position:absolute;right:-4%;bottom:-12%;
-    font-family:"Spectral",serif;font-weight:700;font-size:24vw;
-    color:rgba(255,255,255,0.035);letter-spacing:-0.02em;pointer-events:none;white-space:nowrap;
-  }
-  .hero .wrap{position:relative;z-index:2;}
-  .hero h1{
-    font-size:clamp(34px,6.2vw,68px);margin:0 0 22px;max-width:18ch;color:#F3F4EE;
-  }
-  .hero .sub{font-size:clamp(17px,2.2vw,21px);color:#CFE0D4;max-width:46ch;margin:0 0 38px;}
-
-  .datablock{
-    display:flex;flex-wrap:wrap;gap:0;border:1px solid rgba(255,255,255,0.16);
-    border-radius:3px;margin:0 0 34px;max-width:520px;overflow:hidden;
-  }
-  .datablock div{padding:18px 26px;flex:1 1 0;min-width:150px;}
-  .datablock div + div{border-left:1px solid rgba(255,255,255,0.16);}
-  .datablock .k{font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted-on-dark);margin-bottom:6px;}
-  .datablock .v{font-family:"Spectral",serif;font-size:24px;font-weight:600;color:#F3F4EE;}
-  @media(max-width:560px){ .datablock div + div{border-left:none;border-top:1px solid rgba(255,255,255,0.16);} }
-
-  .hero .undercta{margin:22px 0 0;font-size:15px;color:#B9CcBe;max-width:44ch;line-height:1.55;}
-  .hero .undercta b{color:#E9EFe9;font-weight:600;}
+  .hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-deep) 100%);color:#EAF1FB;padding:74px 0 80px;position:relative;overflow:hidden;}
+  .hero::before{content:"";position:absolute;top:-30%;right:-10%;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(44,151,221,0.35),transparent 70%);pointer-events:none;}
+  .hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr 0.85fr;gap:50px;align-items:center;}
+  .hero h1{font-size:clamp(33px,4.6vw,58px);margin:0 0 20px;color:#fff;}
+  .hero .sub{font-size:clamp(17px,2vw,20px);color:#C3D3EC;max-width:42ch;margin:0 0 32px;}
+  .datablock{display:flex;flex-wrap:wrap;gap:14px;margin:0 0 30px;}
+  .dt{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:14px;padding:13px 22px 13px 13px;min-width:210px;}
+  .dt-ico{flex:0 0 auto;width:46px;height:46px;border-radius:11px;background:var(--azure);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 16px rgba(44,151,221,0.35);}
+  .dt-ico svg{width:24px;height:24px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+  .dt .k{display:block;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted-on-dark);margin-bottom:4px;}
+  .dt .v{display:block;font-family:"Montserrat",sans-serif;font-size:20px;font-weight:800;color:#fff;line-height:1.1;}
+  .undercta{margin:20px 0 0;font-size:15px;color:#AEC2E0;max-width:42ch;line-height:1.55;}
+  .undercta b{color:#fff;font-weight:600;}
+  .hero-photo{border-radius:14px;overflow:hidden;aspect-ratio:4/4.4;background:#0c1730;box-shadow:0 24px 60px rgba(0,0,0,0.4);border:1px solid rgba(255,255,255,0.1);}
+  .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;}
+  @media(max-width:820px){ .hero .wrap{grid-template-columns:1fr;gap:34px;} .hero-photo{max-width:340px;aspect-ratio:4/4;} }
 
   /* ---------- Sections ---------- */
-  .section{padding:78px 0;}
-  .section + .section{border-top:1px solid var(--line);}
-  .section h2{font-size:clamp(26px,3.6vw,40px);margin:0 0 14px;max-width:24ch;}
-  .lead{font-size:18px;color:var(--muted);max-width:54ch;margin:0 0 36px;}
+  .section{padding:74px 0;}
+  .section h2{font-size:clamp(26px,3.4vw,40px);margin:0 0 16px;max-width:24ch;color:var(--navy);}
+  .lead{font-size:18px;color:var(--muted);max-width:56ch;margin:0 0 34px;}
 
-  /* check lists */
   .checks{list-style:none;margin:0;padding:0;display:grid;gap:18px;}
-  .checks.two{grid-template-columns:1fr 1fr;gap:18px 40px;}
+  .checks.two{grid-template-columns:1fr 1fr;gap:18px 44px;}
   @media(max-width:680px){ .checks.two{grid-template-columns:1fr;} }
-  .checks li{display:flex;gap:16px;align-items:flex-start;font-size:18px;line-height:1.5;}
-  .checks li::before{
-    content:"";flex:0 0 auto;width:26px;height:26px;margin-top:1px;border-radius:50%;
-    background:var(--forest);
-    -webkit-mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='white' d='M9.55 17.6 4.4 12.45l1.4-1.4 3.75 3.75 8.25-8.25 1.4 1.4z'/></svg>") center/16px no-repeat;
-    mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='white' d='M9.55 17.6 4.4 12.45l1.4-1.4 3.75 3.75 8.25-8.25 1.4 1.4z'/></svg>") center/16px no-repeat;
-  }
+  .checks li{display:flex;gap:15px;align-items:flex-start;font-size:18px;line-height:1.5;}
+  .checks li::before{content:"";flex:0 0 auto;width:26px;height:26px;margin-top:1px;border-radius:50%;background:var(--azure);
+    -webkit-mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='white' d='M9.55 17.6 4.4 12.45l1.4-1.4 3.75 3.75 8.25-8.25 1.4 1.4z'/></svg>") center/15px no-repeat;
+    mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='white' d='M9.55 17.6 4.4 12.45l1.4-1.4 3.75 3.75 8.25-8.25 1.4 1.4z'/></svg>") center/15px no-repeat;}
 
-  /* "для кого" plain list */
-  .plainlist{list-style:none;margin:0 0 28px;padding:0;display:grid;gap:14px;max-width:46ch;}
-  .plainlist li{position:relative;padding-left:26px;font-size:18px;color:var(--ink);}
-  .plainlist li::before{content:"";position:absolute;left:0;top:13px;width:9px;height:9px;background:var(--brass);border-radius:50%;}
-  .closing{font-family:"Spectral",serif;font-size:22px;font-weight:600;color:var(--forest);}
+  /* mirror block */
+  .mirror{background:var(--paper-2);}
+  .crosslist{list-style:none;margin:0 0 30px;padding:0;display:grid;gap:14px;max-width:52ch;}
+  .crosslist li{display:flex;gap:14px;align-items:center;font-size:18px;color:var(--ink);}
+  .crosslist li::before{content:"✕";flex:0 0 auto;width:24px;height:24px;border-radius:50%;background:var(--paper-3);color:var(--muted);font-size:13px;display:flex;align-items:center;justify-content:center;font-weight:700;}
+  .turn{font-family:"Montserrat",sans-serif;font-weight:800;font-size:clamp(22px,3vw,30px);color:var(--navy);max-width:24ch;}
+  .turn span{color:var(--azure);}
 
-  /* soft note */
-  .softnote{
-    margin-top:30px;padding:20px 24px;background:var(--paper-2);border-left:3px solid var(--brass);
-    border-radius:0 3px 3px 0;color:var(--muted);font-size:16px;max-width:58ch;
-  }
+  /* statement band */
+  .band{background:var(--navy);color:#fff;padding:58px 0;}
+  .band .big{font-family:"Montserrat",sans-serif;font-weight:800;font-size:clamp(24px,3.4vw,38px);line-height:1.2;max-width:20ch;margin:0;}
+  .band .big span{color:var(--sky);}
+
+  /* plain list */
+  .plainlist{list-style:none;margin:0 0 26px;padding:0;display:grid;gap:13px;max-width:46ch;}
+  .plainlist li{position:relative;padding-left:24px;font-size:18px;}
+  .plainlist li::before{content:"";position:absolute;left:0;top:12px;width:8px;height:8px;background:var(--azure);border-radius:50%;}
+  .closing{font-family:"Montserrat",sans-serif;font-size:22px;font-weight:800;color:var(--navy);}
+
+  .softnote{margin-top:28px;padding:20px 24px;background:var(--paper-2);border-left:4px solid var(--azure);border-radius:0 8px 8px 0;color:var(--muted);font-size:16px;max-width:60ch;}
 
   /* host */
-  .host{display:grid;grid-template-columns:280px 1fr;gap:48px;align-items:center;}
-  .host .photo{border-radius:4px;overflow:hidden;background:var(--paper-2);aspect-ratio:4/5;}
+  .host{display:grid;grid-template-columns:300px 1fr;gap:48px;align-items:center;}
+  .host .photo{border-radius:12px;overflow:hidden;background:var(--paper-2);aspect-ratio:4/5;}
   .host .photo img{width:100%;height:100%;object-fit:cover;}
-  .host .name{font-family:"Spectral",serif;font-size:30px;font-weight:600;margin:0 0 18px;}
-  .host .bio{list-style:none;margin:0;padding:0;display:grid;gap:12px;}
-  .host .bio li{padding-left:24px;position:relative;font-size:18px;color:var(--ink);}
-  .host .bio li::before{content:"";position:absolute;left:0;top:12px;width:14px;height:1px;background:var(--brass);}
-  @media(max-width:680px){ .host{grid-template-columns:1fr;gap:28px;} .host .photo{max-width:260px;} }
+  .host .name{font-family:"Montserrat",sans-serif;font-size:30px;font-weight:800;margin:0 0 16px;color:var(--navy);}
+  .host .bio{list-style:none;margin:0 0 24px;padding:0;display:grid;gap:11px;}
+  .host .bio li{padding-left:22px;position:relative;font-size:17px;}
+  .host .bio li::before{content:"";position:absolute;left:0;top:11px;width:12px;height:2px;background:var(--azure);}
+  .host .quote{border-left:4px solid var(--azure);padding:6px 0 6px 20px;font-family:"Montserrat",sans-serif;font-weight:600;font-size:19px;color:var(--navy);font-style:italic;max-width:40ch;}
+  @media(max-width:680px){ .host{grid-template-columns:1fr;gap:26px;} .host .photo{max-width:280px;} }
 
-  /* diagnostics block */
+  /* diagnostics */
   .diag{background:var(--paper-2);}
-  .diag .strong{
-    font-family:"Spectral",serif;font-size:clamp(22px,3vw,28px);font-weight:600;color:var(--forest);
-    line-height:1.3;margin:36px 0 0;max-width:30ch;padding-top:28px;border-top:1px solid var(--line);
-  }
+  .diaggrid{display:grid;grid-template-columns:1fr 320px;gap:46px;align-items:start;}
+  .diag .strong{font-family:"Montserrat",sans-serif;font-weight:800;font-size:clamp(21px,2.6vw,26px);color:var(--navy);line-height:1.3;margin:34px 0 0;max-width:32ch;padding-top:26px;border-top:1px solid var(--line);}
+  .diag-photo{border-radius:12px;overflow:hidden;box-shadow:0 16px 40px rgba(22,40,75,0.16);}
+  .diag-photo img{width:100%;height:100%;object-fit:cover;}
+  @media(max-width:820px){ .diaggrid{grid-template-columns:1fr;} .diag-photo{max-width:360px;} }
 
-  /* ---------- Form ---------- */
-  .form-section{
-    background:radial-gradient(120% 120% at 20% 0%, #234a38 0%, var(--forest) 50%, var(--forest-deep) 100%);
-    color:#EEF1EC;padding:80px 0;
-  }
-  .form-section h2{color:#F3F4EE;}
-  .form-section .lead{color:#C6D6CB;}
-  .form-card{
-    background:var(--paper);color:var(--ink);border-radius:4px;padding:38px;max-width:680px;
-  }
+  /* atmosphere gallery */
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .gallery img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:10px;}
+  @media(max-width:760px){ .gallery{grid-template-columns:1fr 1fr;} }
+  @media(max-width:460px){ .gallery{grid-template-columns:1fr;} }
+
+  /* after-registration steps */
+  .flow{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:32px 0 0;}
+  .flow .step{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);color:#DCE7F6;border-radius:30px;padding:9px 16px;font-size:14px;font-weight:500;}
+  .flow .arrow{color:var(--sky);font-weight:700;}
+
+  /* form */
+  .form-section{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-deep) 100%);color:#EAF1FB;padding:78px 0;}
+  .form-section h2{color:#fff;}
+  .form-section .lead{color:#C3D3EC;}
+  .form-card{background:var(--paper);color:var(--ink);border-radius:14px;padding:38px;max-width:700px;box-shadow:0 24px 60px rgba(0,0,0,0.3);}
   @media(max-width:560px){ .form-card{padding:26px 20px;} }
   .field{margin-bottom:20px;}
-  .field label{display:block;font-weight:600;font-size:15px;margin-bottom:8px;}
-  .field input[type=text],.field input[type=tel],.field input[type=email]{
-    width:100%;padding:14px 16px;font-size:16px;font-family:inherit;color:var(--ink);
-    background:var(--field);border:1px solid var(--line);border-radius:3px;transition:border-color .15s;
-  }
-  .field input:focus{outline:none;border-color:var(--forest);box-shadow:0 0 0 3px rgba(28,61,46,0.12);}
+  .field label{display:block;font-weight:600;font-size:15px;margin-bottom:8px;color:var(--navy);}
+  .field input{width:100%;padding:14px 16px;font-size:16px;font-family:inherit;color:var(--ink);background:#F7FAFD;border:1px solid var(--line);border-radius:8px;transition:border-color .15s,box-shadow .15s;}
+  .field input:focus{outline:none;border-color:var(--azure);box-shadow:0 0 0 3px rgba(44,151,221,0.15);}
   .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
   @media(max-width:560px){ .grid2{grid-template-columns:1fr;gap:0;} }
-
   fieldset{border:none;margin:0 0 22px;padding:0;}
-  fieldset legend{font-weight:600;font-size:15px;margin-bottom:12px;padding:0;}
-  .opt{display:flex;align-items:flex-start;gap:12px;padding:11px 14px;border:1px solid var(--line);
-    border-radius:3px;margin-bottom:8px;cursor:pointer;background:var(--field);transition:border-color .15s,background .15s;font-size:16px;}
-  .opt:hover{border-color:#BFC4B3;}
-  .opt input{accent-color:var(--forest);margin-top:3px;flex:0 0 auto;width:18px;height:18px;}
-  .opt:has(input:checked){border-color:var(--forest);background:#fff;}
-
-  .form-card .btn{width:100%;margin-top:10px;}
-  .form-note{font-size:14px;color:var(--muted);margin-top:16px;text-align:center;}
-
+  fieldset legend{font-family:"Montserrat",sans-serif;font-weight:700;font-size:15px;margin-bottom:12px;padding:0;color:var(--navy);}
+  .opt{display:flex;align-items:flex-start;gap:12px;padding:11px 14px;border:1px solid var(--line);border-radius:8px;margin-bottom:8px;cursor:pointer;background:#F7FAFD;transition:border-color .15s,background .15s;font-size:16px;}
+  .opt:hover{border-color:var(--sky);}
+  .opt input{accent-color:var(--azure);margin-top:3px;flex:0 0 auto;width:18px;height:18px;}
+  .opt:has(input:checked){border-color:var(--azure);background:#fff;}
+  .form-card .btn{width:100%;margin-top:8px;}
+  .form-note{font-size:14px;color:var(--muted);margin-top:14px;text-align:center;}
   .success{display:none;text-align:center;padding:24px 0;}
   .success.show{display:block;}
-  .success .check{width:58px;height:58px;border-radius:50%;background:var(--forest);margin:0 auto 18px;
+  .success .check{width:58px;height:58px;border-radius:50%;background:var(--azure);margin:0 auto 18px;
     -webkit-mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='white' d='M9.55 17.6 4.4 12.45l1.4-1.4 3.75 3.75 8.25-8.25 1.4 1.4z'/></svg>") center/30px no-repeat;
     mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='white' d='M9.55 17.6 4.4 12.45l1.4-1.4 3.75 3.75 8.25-8.25 1.4 1.4z'/></svg>") center/30px no-repeat;}
-  .success h3{font-family:"Spectral",serif;font-size:24px;margin:0 0 10px;color:var(--forest);}
+  .success h3{font-family:"Montserrat",sans-serif;font-size:24px;margin:0 0 10px;color:var(--navy);}
   .success p{color:var(--muted);margin:0;}
 
-  /* footer */
-  footer{background:var(--ink);color:#A9B2AB;padding:34px 0;font-size:14px;}
-  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;}
-  footer .brand-f{font-family:"Spectral",serif;color:#E7EAE5;font-size:16px;}
+  footer{background:var(--navy-deep);color:#9FB2D0;padding:34px 0;font-size:14px;}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;align-items:center;}
+  footer .brand-f{font-family:"Montserrat",sans-serif;font-weight:800;color:#fff;font-size:17px;}
+  footer .brand-f span{color:var(--sky);}
 
-  /* entrance */
   @media(prefers-reduced-motion:no-preference){
     .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease;}
     .reveal.in{opacity:1;transform:none;}
@@ -211,56 +195,88 @@
 </head>
 <body>
 
-<!-- ================= TOP BAR ================= -->
+<!-- ============ TOP BAR ============ -->
 <header class="topbar">
   <div class="wrap">
-    <a class="brand" href="#top">СВОБОДА<small>школа предпринимательства</small></a>
+    <a class="logo-area" href="#top">
+      <img src="logo.png" alt="#БольшеСвободы" onerror="this.style.display='none';document.getElementById('wm').style.display='flex';">
+      <span class="wordmark" id="wm" style="display:none;">
+        <b><span>#</span>БольшеСвободы</b>
+        <small>Школа предпринимательства</small>
+      </span>
+    </a>
     <a class="btn" href="#reg">Зарегистрироваться</a>
   </div>
 </header>
 
-<!-- ================= HERO ================= -->
+<!-- ============ HERO ============ -->
 <section class="hero" id="top">
   <div class="wrap">
-    <span class="eyebrow on-dark">Бесплатный онлайн-вебинар</span>
-    <h1 class="display">Почему главный враг бизнеса — его владелец?</h1>
-    <p class="sub">Онлайн-вебинар для действующих предпринимателей.</p>
-
-    <div class="datablock">
-      <div>
-        <div class="k">Дата</div>
-        <div class="v">[ВСТАВИТЬ ДАТУ]</div>
+    <div>
+      <span class="eyebrow on-dark">Живая онлайн-встреча для действующих предпринимателей</span>
+      <h1 class="display">Почему главный враг бизнеса — <span class="accent">его владелец?</span></h1>
+      <p class="sub">Онлайн-встреча, на которой вы увидите, какой навык собственника сейчас ограничивает рост вашего бизнеса.</p>
+      <div class="datablock">
+        <div class="dt">
+          <span class="dt-ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9.5h18M8 3v4M16 3v4"/></svg></span>
+          <span><span class="k">Дата</span><span class="v">[ВСТАВИТЬ ДАТУ]</span></span>
+        </div>
+        <div class="dt">
+          <span class="dt-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5l3.5 2"/></svg></span>
+          <span><span class="k">Время</span><span class="v">[ВСТАВИТЬ ВРЕМЯ] МСК</span></span>
+        </div>
       </div>
-      <div>
-        <div class="k">Время</div>
-        <div class="v">[ВСТАВИТЬ ВРЕМЯ] МСК</div>
-      </div>
+      <a class="btn" href="#reg">Зарегистрироваться на встречу</a>
+      <p class="undercta">В конце встречи участники смогут пройти <b>ИИ-диагностику предпринимателя</b> и получить персональную карту ограничений роста.</p>
     </div>
-
-    <a class="btn light" href="#reg">Зарегистрироваться на вебинар</a>
-    <p class="undercta">В конце вебинара участники смогут пройти <b>ИИ-диагностику предпринимателя</b> и получить персональную карту ограничений роста.</p>
+    <div class="hero-photo">
+      <img src="https://topchargeback-beep.github.io/Svoboda/assets/founder.jpg" alt="Инсар Валиахметов, основатель школы «Свобода»" loading="eager">
+    </div>
   </div>
 </section>
 
-<!-- ================= НА ВЕБИНАРЕ ВЫ УЗНАЕТЕ ================= -->
+<!-- ============ MIRROR ============ -->
+<section class="section mirror reveal">
+  <div class="wrap">
+    <span class="eyebrow">Знакомо?</span>
+    <h2 class="display">Вы наверняка уже искали причину</h2>
+    <ul class="crosslist">
+      <li>маркетолог не дал результат</li>
+      <li>подрядчик подвёл</li>
+      <li>сильный сотрудник не оправдал ожиданий</li>
+      <li>реклама не окупилась</li>
+      <li>РОП так и не построил систему</li>
+    </ul>
+    <p class="turn">А что, если причина — <span>не в них?</span></p>
+  </div>
+</section>
+
+<!-- ============ STATEMENT BAND ============ -->
+<section class="band reveal">
+  <div class="wrap">
+    <p class="big">Бизнес растёт только до уровня развития <span>предпринимателя.</span></p>
+  </div>
+</section>
+
+<!-- ============ ЧТО ВЫ ПОЙМЁТЕ ============ -->
 <section class="section reveal">
   <div class="wrap">
-    <span class="eyebrow">Программа</span>
-    <h2 class="display">На вебинаре вы узнаете</h2>
+    <span class="eyebrow">Программа встречи</span>
+    <h2 class="display">Что вы поймёте на встрече</h2>
     <ul class="checks two">
-      <li>Почему бизнес растёт только до уровня предпринимателя</li>
-      <li>Как определить свой главный потолок роста</li>
-      <li>Почему знания не дают результат</li>
-      <li>Какой навык ограничивает рост вашей компании</li>
+      <li>почему бизнес растёт только до уровня предпринимателя</li>
+      <li>как определить свой главный потолок роста</li>
+      <li>почему знания не дают результат</li>
+      <li>какой навык ограничивает рост вашей компании</li>
     </ul>
   </div>
 </section>
 
-<!-- ================= ДЛЯ КОГО ================= -->
-<section class="section reveal">
+<!-- ============ ДЛЯ КОГО ============ -->
+<section class="section mirror reveal">
   <div class="wrap">
     <span class="eyebrow">Аудитория</span>
-    <h2 class="display">Для кого этот вебинар</h2>
+    <h2 class="display">Для кого эта встреча</h2>
     <p class="lead">Если вы:</p>
     <ul class="plainlist">
       <li>работаете больше всех в компании;</li>
@@ -268,16 +284,16 @@
       <li>не понимаете, почему бизнес перестал расти;</li>
       <li>постоянно тушите пожары —</li>
     </ul>
-    <p class="closing">то этот вебинар для вас.</p>
+    <p class="closing">то эта встреча для вас.</p>
   </div>
 </section>
 
-<!-- ================= ТОЛЬКО ДЛЯ ДЕЙСТВУЮЩИХ ================= -->
+<!-- ============ ТОЛЬКО ДЛЯ ДЕЙСТВУЮЩИХ ============ -->
 <section class="section reveal">
   <div class="wrap">
     <span class="eyebrow">Уровень участников</span>
     <h2 class="display">Только для действующих предпринимателей</h2>
-    <p class="lead">На вебинаре мы говорим о развитии предпринимателя через работу над действующим бизнесом. Поэтому участие будет полезно, если:</p>
+    <p class="lead">На встрече мы говорим о развитии предпринимателя через работу над действующим бизнесом. Поэтому участие будет полезно, если:</p>
     <ul class="checks two">
       <li>у вас уже есть бизнес</li>
       <li>есть клиенты</li>
@@ -288,80 +304,89 @@
   </div>
 </section>
 
-<!-- ================= КТО ВЕДЕТ ================= -->
-<section class="section reveal">
+<!-- ============ КТО ВЕДЁТ ============ -->
+<section class="section mirror reveal">
   <div class="wrap">
     <span class="eyebrow">Ведущий</span>
     <h2 class="display">Кто ведёт</h2>
     <div class="host">
       <div class="photo">
-        <!-- Загрузите фото в этот же репозиторий с именем founder.jpg (Add file → Upload files). -->
-        <img src="founder.jpg" alt="Инсар Валиахметов, основатель школы СВОБОДА" loading="lazy">
+        <img src="https://topchargeback-beep.github.io/Svoboda/assets/diagnostika-cta.jpg" alt="Инсар Валиахметов" loading="lazy">
       </div>
       <div>
         <p class="name">Инсар Валиахметов</p>
         <ul class="bio">
-          <li>13+ лет предпринимательства</li>
-          <li>Выпускник СКОЛКОВО</li>
-          <li>Основатель школы предпринимательства СВОБОДА</li>
+          <li>предприниматель 13+ лет</li>
+          <li>выпускник СКОЛКОВО</li>
+          <li>приглашённый эксперт РБК, Коммерсантъ, Эксперт, АиФ</li>
+          <li>основатель школы предпринимательства «Свобода»</li>
         </ul>
+        <p class="quote">«Чем больше развивается предприниматель, тем быстрее растёт его бизнес. И наоборот».</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= ИИ-ДИАГНОСТИКА ================= -->
+<!-- ============ ИИ-ДИАГНОСТИКА ============ -->
 <section class="section diag reveal">
   <div class="wrap">
-    <span class="eyebrow">После вебинара</span>
+    <span class="eyebrow">После встречи</span>
     <h2 class="display">Что вы получите после ИИ-диагностики</h2>
-    <p class="lead">В конце вебинара участники смогут пройти ИИ-диагностику предпринимателя. Это не просто тест: диагностика поможет увидеть, что именно сейчас ограничивает рост вашей компании и какой навык собственника нужно развивать следующим. По итогам вы получите персональную карту ограничений роста.</p>
-    <p style="margin:0 0 22px;font-weight:600;">Она покажет:</p>
-    <ul class="checks two">
-      <li>что сейчас тормозит развитие вашего бизнеса</li>
-      <li>где находится главный потолок роста: в продажах, команде, управлении, делегировании, стратегии или роли собственника</li>
-      <li>какой навык предпринимателя нужно развивать следующим</li>
-      <li>почему текущие действия могут не давать результата</li>
-      <li>на чём стоит сфокусироваться в ближайшие 90 дней</li>
-    </ul>
-    <p class="strong">Диагностика поможет не гадать, что делать дальше, а увидеть главный ограничитель роста бизнеса.</p>
+    <div class="diaggrid">
+      <div>
+        <p class="lead" style="margin-bottom:22px;">В конце встречи участники смогут пройти ИИ-диагностику предпринимателя. Это не просто тест: диагностика поможет увидеть, что именно сейчас ограничивает рост вашей компании и какой навык собственника нужно развивать следующим. По итогам вы получите персональную карту ограничений роста.</p>
+        <p style="margin:0 0 18px;font-weight:600;color:var(--navy);">Она покажет:</p>
+        <ul class="checks">
+          <li>что сейчас тормозит развитие вашего бизнеса</li>
+          <li>где находится главный потолок роста: в продажах, команде, управлении, делегировании, стратегии или роли собственника</li>
+          <li>какой навык предпринимателя нужно развивать следующим</li>
+          <li>почему текущие действия могут не давать результата</li>
+          <li>на чём стоит сфокусироваться в ближайшие 90 дней</li>
+        </ul>
+        <p class="strong">Диагностика поможет не гадать, что делать дальше, а увидеть главный ограничитель роста бизнеса.</p>
+      </div>
+      <div class="diag-photo">
+        <img src="https://topchargeback-beep.github.io/Svoboda/assets/results.jpg" alt="Предприниматели школы «Свобода» на встрече" loading="lazy">
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ================= ФОРМА ================= -->
+<!-- ============ АТМОСФЕРА ============ -->
+<section class="section reveal">
+  <div class="wrap">
+    <span class="eyebrow">Атмосфера</span>
+    <h2 class="display">Среда действующих предпринимателей</h2>
+    <p class="lead">Это не массовый вебинар, а встреча предпринимателей, которые относятся к делу как к профессии.</p>
+    <div class="gallery">
+      <img src="https://topchargeback-beep.github.io/Svoboda/assets/gallery/who-3.jpg" alt="Работа с группой предпринимателей" loading="lazy">
+      <img src="https://topchargeback-beep.github.io/Svoboda/assets/svoboda-session.jpg" alt="Стратегическая сессия" loading="lazy">
+      <img src="https://topchargeback-beep.github.io/Svoboda/assets/gallery/mood-3.jpg" alt="Мастермайнд за круглым столом" loading="lazy">
+      <img src="https://topchargeback-beep.github.io/Svoboda/assets/gallery/mood-4.jpg" alt="Сообщество предпринимателей" loading="lazy">
+      <img src="https://topchargeback-beep.github.io/Svoboda/assets/hero.jpg" alt="Группа предпринимателей за обсуждением" loading="lazy">
+      <img src="https://topchargeback-beep.github.io/Svoboda/assets/gallery/mood-6.jpg" alt="Разбор бизнеса" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ============ ФОРМА ============ -->
 <section class="form-section" id="reg">
   <div class="wrap">
     <span class="eyebrow on-dark">Регистрация</span>
-    <h2 class="display">Зарегистрироваться на вебинар</h2>
+    <h2 class="display">Зарегистрироваться на встречу</h2>
     <p class="lead">Оставьте заявку — детали подключения придут в выбранный канал связи.</p>
 
     <div class="form-card">
-      <!--
-        ВАЖНО: чтобы заявки куда-то приходили, замените адрес в action ниже
-        на свой код Formspree (или подключите Telegram-бот). Подробности — в сообщении.
-      -->
+      <!-- ВАЖНО: замените адрес в action на свой код Formspree, чтобы заявки приходили на почту. -->
       <form id="regform" action="https://formspree.io/f/REPLACE_WITH_YOUR_ID" method="POST">
         <div class="grid2">
-          <div class="field">
-            <label for="name">Имя</label>
-            <input type="text" id="name" name="Имя" required autocomplete="name">
-          </div>
-          <div class="field">
-            <label for="phone">Телефон</label>
-            <input type="tel" id="phone" name="Телефон" required autocomplete="tel">
-          </div>
+          <div class="field"><label for="name">Имя</label><input type="text" id="name" name="Имя" required autocomplete="name"></div>
+          <div class="field"><label for="phone">Телефон</label><input type="tel" id="phone" name="Телефон" required autocomplete="tel"></div>
         </div>
         <div class="grid2">
-          <div class="field">
-            <label for="tg">Telegram</label>
-            <input type="text" id="tg" name="Telegram" placeholder="@username">
-          </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="Email" required autocomplete="email">
-          </div>
+          <div class="field"><label for="tg">Telegram</label><input type="text" id="tg" name="Telegram" placeholder="@username"></div>
+          <div class="field"><label for="email">Email</label><input type="email" id="email" name="Email" required autocomplete="email"></div>
         </div>
-
         <fieldset>
           <legend>Ваш статус</legend>
           <label class="opt"><input type="radio" name="Статус" value="Собственник бизнеса" required> Собственник бизнеса</label>
@@ -370,7 +395,6 @@
           <label class="opt"><input type="radio" name="Статус" value="Самозанятый"> Самозанятый</label>
           <label class="opt"><input type="radio" name="Статус" value="Планирую открыть бизнес"> Планирую открыть бизнес</label>
         </fieldset>
-
         <fieldset>
           <legend>Что сейчас больше всего ограничивает рост</legend>
           <label class="opt"><input type="radio" name="Ограничение роста" value="Нет стабильных заявок" required> Нет стабильных заявок</label>
@@ -381,46 +405,44 @@
           <label class="opt"><input type="radio" name="Ограничение роста" value="Не хватает времени"> Не хватает времени</label>
           <label class="opt"><input type="radio" name="Ограничение роста" value="Не понимаю, что именно мешает"> Не понимаю, что именно мешает</label>
         </fieldset>
-
         <button type="submit" class="btn">Зарегистрироваться</button>
-        <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку данных для участия в вебинаре.</p>
+        <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку данных для участия во встрече.</p>
       </form>
-
       <div class="success" id="success">
         <div class="check"></div>
         <h3>Заявка принята</h3>
-        <p>Детали подключения к вебинару придут в выбранный канал связи.</p>
+        <p>Детали подключения к онлайн-встрече придут в выбранный канал связи.</p>
       </div>
+    </div>
+
+    <div class="flow">
+      <span class="step">Заявка</span><span class="arrow">→</span>
+      <span class="step">Онлайн-встреча</span><span class="arrow">→</span>
+      <span class="step">Диагностика</span><span class="arrow">→</span>
+      <span class="step">Карта роста бизнеса</span>
     </div>
   </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
+<!-- ============ FOOTER ============ -->
 <footer>
   <div class="wrap">
-    <span class="brand-f">СВОБОДА — школа предпринимательства</span>
+    <span class="brand-f"><span>#</span>БольшеСвободы — школа предпринимательства</span>
     <span>© 2026 · Предпринимательство — это профессия</span>
   </div>
 </footer>
 
 <script>
-  // Плавная прокрутка к форме уже работает через CSS scroll-behavior.
-
-  // Появление секций при прокрутке
   const io = new IntersectionObserver((entries)=>{
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
   },{threshold:0.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-  // Обработка формы
   const form = document.getElementById('regform');
   const success = document.getElementById('success');
-
   form.addEventListener('submit', async function(e){
     e.preventDefault();
     const data = new FormData(form);
-
-    // Если код Formspree ещё не вставлен — просто показываем подтверждение (для проверки вида).
     if (form.action.includes('REPLACE_WITH_YOUR_ID')){
       showSuccess();
       console.warn('Форма не подключена: вставьте свой код Formspree в action, чтобы получать заявки.');
@@ -428,13 +450,9 @@
     }
     try{
       const res = await fetch(form.action, { method:'POST', body:data, headers:{'Accept':'application/json'} });
-      if(res.ok){ showSuccess(); }
-      else { alert('Не удалось отправить заявку. Попробуйте ещё раз.'); }
-    }catch(err){
-      alert('Проблема с соединением. Проверьте интернет и попробуйте ещё раз.');
-    }
+      if(res.ok){ showSuccess(); } else { alert('Не удалось отправить заявку. Попробуйте ещё раз.'); }
+    }catch(err){ alert('Проблема с соединением. Проверьте интернет и попробуйте ещё раз.'); }
   });
-
   function showSuccess(){
     form.style.display='none';
     success.classList.add('show');
