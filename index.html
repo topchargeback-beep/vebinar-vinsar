@@ -110,6 +110,10 @@
   .crosslist li::before{content:"✕";flex:0 0 auto;width:24px;height:24px;border-radius:50%;background:var(--paper-3);color:var(--muted);font-size:13px;display:flex;align-items:center;justify-content:center;font-weight:700;}
   .turn{font-family:"Montserrat",sans-serif;font-weight:800;font-size:clamp(22px,3vw,30px);color:var(--navy);max-width:24ch;}
   .turn span{color:var(--azure);}
+  .mirror-grid{display:grid;grid-template-columns:1fr 400px;gap:50px;align-items:center;}
+  .mirror-photo{border-radius:14px;overflow:hidden;box-shadow:0 18px 44px rgba(22,40,75,0.18);}
+  .mirror-photo img{width:100%;display:block;}
+  @media(max-width:820px){ .mirror-grid{grid-template-columns:1fr;gap:30px;} .mirror-photo{max-width:420px;} }
 
   /* statement band */
   .band{background:var(--navy);color:#fff;padding:58px 0;}
@@ -163,6 +167,11 @@
   .card{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;}
   .card:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(22,40,75,0.10);border-color:var(--sky);}
   .card .t{font-size:17px;line-height:1.45;padding-top:5px;}
+  .cards-1col{grid-template-columns:1fr;}
+  .prog-grid{display:grid;grid-template-columns:minmax(0,360px) 1fr;gap:44px;align-items:center;}
+  .prog-photo{border-radius:14px;overflow:hidden;box-shadow:0 18px 44px rgba(22,40,75,0.18);}
+  .prog-photo img{width:100%;display:block;}
+  @media(max-width:820px){ .prog-grid{grid-template-columns:1fr;gap:28px;} .prog-photo{max-width:440px;} }
 
   .icolist{list-style:none;margin:0;padding:0;display:grid;gap:16px;}
   .icolist li{display:flex;gap:14px;align-items:flex-start;font-size:18px;line-height:1.5;}
@@ -250,24 +259,29 @@
       <p class="undercta">В конце встречи участники смогут пройти <b>ИИ-диагностику предпринимателя</b> и получить персональную карту роста бизнеса на 90 дней.</p>
     </div>
     <div class="hero-photo">
-      <img src="https://topchargeback-beep.github.io/Svoboda/assets/founder.jpg" alt="Инсар Валиахметов, основатель школы «#БольшеСвободы»" loading="eager">
+      <img src="main-hero.jpg" alt="Инсар Валиахметов ведёт разбор бизнеса" loading="eager">
     </div>
   </div>
 </section>
 
 <!-- ============ MIRROR ============ -->
 <section class="section mirror reveal">
-  <div class="wrap">
-    <span class="eyebrow">Знакомо?</span>
-    <h2 class="display">Вы наверняка уже искали причину</h2>
-    <ul class="crosslist">
-      <li>маркетолог не дал результат</li>
-      <li>подрядчик подвёл</li>
-      <li>сильный сотрудник не оправдал ожиданий</li>
-      <li>реклама не окупилась</li>
-      <li>РОП так и не построил систему</li>
-    </ul>
-    <p class="turn">А что, если причина — <span>не в них?</span></p>
+  <div class="wrap mirror-grid">
+    <div>
+      <span class="eyebrow">Знакомо?</span>
+      <h2 class="display">Вы наверняка уже искали причину</h2>
+      <ul class="crosslist">
+        <li>маркетолог не дал результат</li>
+        <li>подрядчик подвёл</li>
+        <li>сильный сотрудник не оправдал ожиданий</li>
+        <li>реклама не окупилась</li>
+        <li>РОП так и не построил систему</li>
+      </ul>
+      <p class="turn">А что, если причина — <span>не в них?</span></p>
+    </div>
+    <div class="mirror-photo">
+      <img src="znakomo.jpg" alt="Предприниматель в стрессе за рабочим столом" loading="lazy">
+    </div>
   </div>
 </section>
 
@@ -283,7 +297,9 @@
   <div class="wrap">
     <span class="eyebrow">Программа встречи</span>
     <h2 class="display">Что вы поймёте на встрече</h2>
-    <div class="cards">
+    <div class="prog-grid">
+      <div class="prog-photo"><img src="programma.jpg" alt="Собственник перегружен задачами компании" loading="lazy"></div>
+      <div class="cards cards-1col">
       <div class="card">
         <span class="ico"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 7-7"/><path d="M17 8h4v4"/></svg></span>
         <span class="t">почему бизнес растёт только до уровня предпринимателя</span>
@@ -299,6 +315,7 @@
       <div class="card">
         <span class="ico"><svg viewBox="0 0 24 24"><circle cx="8" cy="9" r="4"/><path d="M11 11.5l8.5 8.5"/><path d="M16 17l2-2"/><path d="M18.5 14.5l2 2"/></svg></span>
         <span class="t">какой навык ограничивает рост вашей компании</span>
+      </div>
       </div>
     </div>
   </div>
@@ -332,8 +349,25 @@
   </div>
 </section>
 
-<!-- ============ ТОЛЬКО ДЛЯ ДЕЙСТВУЮЩИХ ============ -->
+<!-- ============ АТМОСФЕРА ============ -->
 <section class="section reveal">
+  <div class="wrap">
+    <span class="eyebrow">Атмосфера</span>
+    <h2 class="display">Среда действующих предпринимателей</h2>
+    <p class="lead">Это не массовый вебинар, а встреча предпринимателей, которые относятся к делу как к профессии.</p>
+    <div class="gallery">
+      <img src="https://topchargeback-beep.github.io/Svoboda/assets/gallery/who-3.jpg" alt="Работа с группой предпринимателей" loading="lazy">
+      <img src="https://topchargeback-beep.github.io/Svoboda/assets/svoboda-session.jpg" alt="Стратегическая сессия" loading="lazy">
+      <img src="https://topchargeback-beep.github.io/Svoboda/assets/gallery/mood-3.jpg" alt="Мастермайнд за круглым столом" loading="lazy">
+      <img src="https://topchargeback-beep.github.io/Svoboda/assets/gallery/mood-4.jpg" alt="Сообщество предпринимателей" loading="lazy">
+      <img src="https://topchargeback-beep.github.io/Svoboda/assets/hero.jpg" alt="Группа предпринимателей за обсуждением" loading="lazy">
+      <img src="https://topchargeback-beep.github.io/Svoboda/assets/gallery/mood-6.jpg" alt="Разбор бизнеса" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ============ ТОЛЬКО ДЛЯ ДЕЙСТВУЮЩИХ ============ -->
+<section class="section mirror reveal">
   <div class="wrap">
     <span class="eyebrow">Уровень участников</span>
     <h2 class="display">Только для действующих предпринимателей</h2>
@@ -361,13 +395,13 @@
 </section>
 
 <!-- ============ КТО ВЕДЁТ ============ -->
-<section class="section mirror reveal">
+<section class="section reveal">
   <div class="wrap">
     <span class="eyebrow">Ведущий</span>
     <h2 class="display">Кто ведёт</h2>
     <div class="host">
       <div class="photo">
-        <img src="https://topchargeback-beep.github.io/Svoboda/assets/diagnostika-cta.jpg" alt="Инсар Валиахметов" loading="lazy">
+        <img src="https://topchargeback-beep.github.io/Svoboda/assets/founder.jpg" alt="Инсар Валиахметов" loading="lazy">
       </div>
       <div>
         <p class="name">Инсар Валиахметов</p>
@@ -402,25 +436,8 @@
         <p class="strong">Диагностика поможет не гадать, что делать дальше, а увидеть главный ограничитель роста бизнеса.</p>
       </div>
       <div class="diag-photo">
-        <img src="https://topchargeback-beep.github.io/Svoboda/assets/results.jpg" alt="Предприниматели школы «#БольшеСвободы» на встрече" loading="lazy">
+        <img src="diagnostika.jpg" alt="Диагностическая карта бизнеса" loading="lazy">
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ АТМОСФЕРА ============ -->
-<section class="section reveal">
-  <div class="wrap">
-    <span class="eyebrow">Атмосфера</span>
-    <h2 class="display">Среда действующих предпринимателей</h2>
-    <p class="lead">Это не массовый вебинар, а встреча предпринимателей, которые относятся к делу как к профессии.</p>
-    <div class="gallery">
-      <img src="https://topchargeback-beep.github.io/Svoboda/assets/gallery/who-3.jpg" alt="Работа с группой предпринимателей" loading="lazy">
-      <img src="https://topchargeback-beep.github.io/Svoboda/assets/svoboda-session.jpg" alt="Стратегическая сессия" loading="lazy">
-      <img src="https://topchargeback-beep.github.io/Svoboda/assets/gallery/mood-3.jpg" alt="Мастермайнд за круглым столом" loading="lazy">
-      <img src="https://topchargeback-beep.github.io/Svoboda/assets/gallery/mood-4.jpg" alt="Сообщество предпринимателей" loading="lazy">
-      <img src="https://topchargeback-beep.github.io/Svoboda/assets/hero.jpg" alt="Группа предпринимателей за обсуждением" loading="lazy">
-      <img src="https://topchargeback-beep.github.io/Svoboda/assets/gallery/mood-6.jpg" alt="Разбор бизнеса" loading="lazy">
     </div>
   </div>
 </section>
