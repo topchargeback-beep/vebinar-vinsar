@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Почему главный враг бизнеса — его владелец? · Онлайн-встреча для предпринимателей</title>
-<meta name="description" content="Живая онлайн-встреча для действующих предпринимателей. Поймите, какой навык собственника сейчас ограничивает рост вашего бизнеса.">
+<meta name="description" content="Живая онлайн-встреча для действующих предпринимателей. Поймите, почему ваш бизнес упёрся в потолок и не растёт дальше — и почему главный враг бизнеса часто его владелец.">
+
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -152,6 +153,23 @@
   .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
   .gallery img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:10px;transition:transform .25s ease,box-shadow .25s ease;}
   .gallery img:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(22,40,75,0.2);}
+
+  .fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  @media(max-width:760px){ .fit-grid{grid-template-columns:1fr;} }
+  .fit-card{border-radius:18px;padding:32px 30px;}
+  .fit-yes{background:var(--navy);}
+  .fit-no{background:#fff;border:1px solid var(--line);}
+  .fit-card h3{font-weight:800;font-size:22px;margin:0 0 22px;}
+  .fit-yes h3{color:#fff;}
+  .fit-no h3{color:var(--navy);}
+  .fit-list{list-style:none;margin:0;padding:0;display:grid;gap:15px;}
+  .fit-list li{display:flex;gap:13px;align-items:flex-start;font-size:16px;line-height:1.4;}
+  .fit-yes .fit-list li{color:#D2E0F2;}
+  .fit-no .fit-list li{color:var(--muted);}
+  .fit-yes .fit-list li::before{content:"";flex:0 0 auto;width:20px;height:20px;margin-top:1px;background:var(--sky);
+    -webkit-mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='white' d='M9.55 17.6 4.4 12.45l1.4-1.4 3.75 3.75 8.25-8.25 1.4 1.4z'/></svg>") center/13px no-repeat;
+    mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='white' d='M9.55 17.6 4.4 12.45l1.4-1.4 3.75 3.75 8.25-8.25 1.4 1.4z'/></svg>") center/13px no-repeat;}
+  .fit-no .fit-list li::before{content:"✕";flex:0 0 auto;width:20px;height:20px;display:flex;align-items:center;justify-content:center;color:#9AA7B8;font-size:12px;font-weight:700;margin-top:1px;}
   @media(max-width:760px){ .gallery{grid-template-columns:1fr 1fr;} }
   @media(max-width:460px){ .gallery{grid-template-columns:1fr;} }
 
@@ -266,7 +284,7 @@
     <div>
       <span class="eyebrow on-dark">Живая онлайн-встреча для действующих предпринимателей</span>
       <h1 class="display">Почему главный враг бизнеса — <span class="accent">его владелец?</span></h1>
-      <p class="sub">Онлайн-встреча, на которой вы увидите, какой навык собственника сейчас ограничивает рост вашего бизнеса.</p>
+      <p class="sub">Встреча, на которой вы поймёте, почему ваш бизнес упёрся в потолок и не растёт дальше.</p>
       <div class="datablock">
         <div class="dt">
           <span class="dt-ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9.5h18M8 3v4M16 3v4"/></svg></span>
@@ -278,7 +296,7 @@
         </div>
       </div>
       <a class="btn" href="#reg">Зарегистрироваться на встречу</a>
-      <p class="undercta">В конце встречи участники смогут пройти <b>ИИ-диагностику предпринимателя</b> и получить персональную карту роста бизнеса на 90 дней.</p>
+      <p class="undercta">В конце встречи участники смогут пройти <b>ИИ-диагностику предпринимателя</b> и получить персональную карту роста предпринимателя и бизнеса на 90 дней.</p>
     </div>
     <div class="hero-photo">
       <img src="main-hero.jpg" alt="Инсар Валиахметов ведёт разбор бизнеса" loading="eager">
@@ -317,26 +335,26 @@
 <!-- ============ ЧТО ВЫ ПОЙМЁТЕ ============ -->
 <section class="section reveal">
   <div class="wrap">
-    <span class="eyebrow">Программа встречи</span>
-    <h2 class="display">Что вы поймёте на встрече</h2>
+    <span class="eyebrow">О встрече</span>
+    <h2 class="display">О чём эта встреча</h2>
     <div class="prog-grid">
       <div class="prog-photo"><img src="programma.jpg" alt="Собственник перегружен задачами компании" loading="lazy"></div>
       <div class="cards cards-1col">
       <div class="card">
         <span class="ico"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 7-7"/><path d="M17 8h4v4"/></svg></span>
-        <span class="t">почему бизнес растёт только до уровня предпринимателя</span>
+        <span class="t">почему ваш бизнес упёрся в потолок и перестал расти</span>
       </div>
       <div class="card">
         <span class="ico"><svg viewBox="0 0 24 24"><path d="M4 4h16"/><path d="M12 21V10"/><path d="M7 14l5-5 5 5"/></svg></span>
-        <span class="t">как определить свой главный потолок роста</span>
+        <span class="t">почему причина роста — и застоя — в самом владельце</span>
       </div>
       <div class="card">
         <span class="ico"><svg viewBox="0 0 24 24"><path d="M9 18h6"/><path d="M10 21.5h4"/><path d="M8.5 14a5 5 0 1 1 7 0c-.7.6-1 1.2-1 2H9.5c0-.8-.3-1.4-1-2z"/></svg></span>
-        <span class="t">почему знания не дают результат</span>
+        <span class="t">почему привычные решения уже не дают результата</span>
       </div>
       <div class="card">
         <span class="ico"><svg viewBox="0 0 24 24"><circle cx="8" cy="9" r="4"/><path d="M11 11.5l8.5 8.5"/><path d="M16 17l2-2"/><path d="M18.5 14.5l2 2"/></svg></span>
-        <span class="t">какой навык ограничивает рост вашей компании</span>
+        <span class="t">что на самом деле определяет потолок вашего бизнеса</span>
       </div>
       </div>
     </div>
@@ -391,28 +409,32 @@
 <!-- ============ ТОЛЬКО ДЛЯ ДЕЙСТВУЮЩИХ ============ -->
 <section class="section mirror reveal">
   <div class="wrap">
-    <span class="eyebrow">Уровень участников</span>
-    <h2 class="display">Только для действующих предпринимателей</h2>
-    <p class="lead">На встрече мы говорим о развитии предпринимателя через работу над действующим бизнесом. Поэтому участие будет полезно, если:</p>
-    <div class="cards">
-      <div class="card">
-        <span class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></svg></span>
-        <span class="t">у вас уже есть бизнес</span>
+    <span class="eyebrow">Кому подойдёт</span>
+    <h2 class="display">Кому подойдёт #БольшеСвободы</h2>
+    <div class="fit-grid">
+      <div class="fit-card fit-yes">
+        <h3>Подойдёт, если</h3>
+        <ul class="fit-list">
+          <li>у вас уже есть действующий бизнес</li>
+          <li>есть клиенты</li>
+          <li>есть продажи</li>
+          <li>вы отвечаете за результат компании</li>
+          <li>хотите расти как предприниматель</li>
+          <li>понимаете, что бизнес упёрся в потолок</li>
+        </ul>
       </div>
-      <div class="card">
-        <span class="ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><path d="M16 5a3 3 0 0 1 0 6"/><path d="M17.5 19a5.4 5.4 0 0 0-2.7-4.7"/></svg></span>
-        <span class="t">есть клиенты</span>
-      </div>
-      <div class="card">
-        <span class="ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h2.6l2.2 12.1a1.5 1.5 0 0 0 1.5 1.2h8.6a1.5 1.5 0 0 0 1.5-1.2L20.5 7H6"/></svg></span>
-        <span class="t">есть продажи</span>
-      </div>
-      <div class="card">
-        <span class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg></span>
-        <span class="t">вы отвечаете за результат компании</span>
+      <div class="fit-card fit-no">
+        <h3>Не подойдёт, если</h3>
+        <ul class="fit-list">
+          <li>вы только планируете открыть бизнес</li>
+          <li>ищете идею для запуска</li>
+          <li>работаете по найму</li>
+          <li>хотите заработать первые деньги</li>
+          <li>ищете мотивацию</li>
+          <li>ждёте волшебную таблетку</li>
+        </ul>
       </div>
     </div>
-    <p class="softnote">Если вы только планируете открыть бизнес, часть материала может быть преждевременной для вашей текущей ситуации.</p>
   </div>
 </section>
 
@@ -429,12 +451,11 @@
         <p class="name">Инсар Валиахметов</p>
         <ul class="bio">
           <li>13+ лет в предпринимательстве</li>
+          <li>опыт построения сервисного бизнеса с продажами по России, СНГ и международным рынкам на русском и английском языках</li>
           <li>выпускник СКОЛКОВО «Практикум-25»</li>
-          <li>основатель юридической компании «Сторона Покупателя»</li>
-          <li>с 2023 года помог 21+ компаниям найти точки роста</li>
-          <li>провёл 75+ стратегических разборов бизнесов за последний год</li>
-          <li>приглашённый эксперт РБК, Коммерсантъ, Эксперт, АиФ</li>
+          <li>основатель юридического сервиса «Сторона Покупателя»</li>
           <li>основатель Школы предпринимательских навыков #БольшеСвободы</li>
+          <li>приглашённый эксперт РБК, Коммерсантъ, Эксперт, АиФ</li>
         </ul>
         <p class="quote">«Чем больше развивается предприниматель, тем быстрее растёт его бизнес. И наоборот».</p>
       </div>
@@ -446,14 +467,14 @@
 <section class="section diag reveal">
   <div class="wrap">
     <span class="eyebrow">После встречи</span>
-    <h2 class="display">Карта роста бизнеса на 90 дней</h2>
+    <h2 class="display">Карта роста предпринимателя и бизнеса на 90 дней</h2>
     <div class="diaggrid">
       <div>
-        <p class="lead" style="margin-bottom:22px;">В конце встречи участники проходят ИИ-диагностику предпринимателя. По её итогам вы получаете не диагноз и не список проблем, а персональную карту роста бизнеса на 90 дней — конкретный план: что усилить, с чего начать и какие шаги дадут результат уже в ближайшие три месяца.</p>
+        <p class="lead" style="margin-bottom:22px;">В конце встречи участники проходят ИИ-диагностику предпринимателя. По её итогам вы получаете не диагноз и не список проблем, а персональную карту роста предпринимателя и бизнеса на 90 дней — конкретный план: что усилить, с чего начать и какие шаги дадут результат уже в ближайшие три месяца.</p>
         <p style="margin:0 0 18px;font-weight:600;color:var(--navy);">Карта покажет:</p>
         <ul class="icolist">
-          <li><span class="mi"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 16V8.5M9 11l3-3 3 3"/></svg></span><span>куда направить усилия, чтобы бизнес вырос в ближайшие 90 дней</span></li>
-          <li><span class="mi"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 7-7"/><path d="M17 8h4v4"/></svg></span><span>какой навык развивать первым, чтобы снять текущий потолок роста</span></li>
+          <li><span class="mi"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 16V8.5M9 11l3-3 3 3"/></svg></span><span>куда направить усилия, чтобы увидеть рост в ближайшие 90 дней</span></li>
+          <li><span class="mi"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 7-7"/><path d="M17 8h4v4"/></svg></span><span>с чего начать, чтобы пробить текущий потолок роста</span></li>
           <li><span class="mi"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9.5h18M8 3v4M16 3v4"/><path d="M9.5 14.5l1.8 1.8 3.2-3.4"/></svg></span><span>какие конкретные шаги дадут максимальный эффект</span></li>
           <li><span class="mi"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M8 12h8"/></svg></span><span>что стоит перестать делать, чтобы не распылять время и деньги</span></li>
           <li><span class="mi"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h7"/></svg></span><span>как расставить приоритеты: продажи, команда, управление, делегирование или стратегия</span></li>
@@ -543,8 +564,5 @@
     document.getElementById('cookie-reject').onclick=function(){ try{localStorage.setItem(K,'rejected');}catch(e){} bar.style.display='none'; };
   })();
 </script>
-<!-- BotHelp -->
-<div id="bh-widget-button-root" data-bh-widget-id="2" data-bh-customer-id="633402"></div>
-<script src="https://main.bothelp.io/w/widget-button.js" defer></script>
 </body>
 </html>
